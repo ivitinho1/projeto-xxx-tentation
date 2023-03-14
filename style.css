@@ -1,0 +1,190 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    margin-left: 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main:after {
+    content: '';
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5438550420168067) 0%, rgba(0, 0, 0, 0.6727065826330532) 100%, rgba(46, 45, 45, 1) 100%);
+    z-index: -1;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly;
+}
+
+.btn {
+    margin-left: 30px;
+    margin-top: 15px;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 6px;
+}
+.texto-h2{
+    color: rgb(236, 224, 224);
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.btn-2{
+    margin-left: 30px;
+    margin-top: 15px;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 6px;
+}
+
+.btn:hover{
+    background: rgb(29, 27, 27);
+    transition: all 0.5s;
+    font-size: 15px;
+}
+.btn-2:hover{
+    background: rgb(29, 27, 27);
+    transition: all 0.5s;
+    font-size: 13px;
+}
+.btn .btn-texto {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 15px;
+}
+.btn .btn-texto:hover {
+    color: white;
+}
+.btn-2 .btn-texto2{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 15px;
+}
+.btn-2 .btn-texto2:hover{
+    color: white;
+}
+.informacoes .logo {
+    max-width: 350px;
+    filter: invert(1);
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+.informacoes .descricao {
+    width: 49%;
+    font-size: 24px;
+    color: rgb(236, 224, 224);
+    line-height: 35px;
+    /*define altura das linhas do texto*/
+}
+
+.botoes-carossel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /*espasamento nos elementos*/
+}
+
+.botoes-carossel .botao {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: white;
+}
+
+.botoes-carossel .botao.selecionado {
+    background-color: #1d8346;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-right: 40px;
+}
+
+.menu-lateral ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-lateral .icone.git {
+    width: 60px;
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
+    /*termina e cmç a animação mais suave*/
+}
+
+.menu-lateral .icone {
+    width: 50px;
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
+}
+
+.menu-lateral .icone:hover {
+    transform: scale(1.2);
+}
+
+.carossel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    /*eixo z,da profundidade*/
+}
+
+.carossel .imagem {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    /*centraliza a imagem sem perder as proporções*/
+    animation: mudarImagem 0.7s;
+}
+
+.carossel .imagem.ativa {
+    display: block;
+}
+
+@keyframes mudarImagem {
+    from {
+        opacity: 0.85;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
